@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  mongo:
+      container_name: vb-mongo
+      image: mongo:latest
+      restart: always
+      ports:
+        - '27017:27017'
+      volumes:
+        - ./vb-data/datadir/mongo/data:/data/db
